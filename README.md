@@ -43,7 +43,7 @@ terraform apply -var-file apply-tfvars/dev.tfvars -target=aws_route53_zone.backs
 This will give you outputs similar to this:
 ![Targeted Apply](images/target.png)
 
-Here's a screenshot of me setting the domain NS servers in my registrar:
+Here's a screenshot of setting the domain NS servers in my registrar:
 ![Registrar](images/registrar.png)
 
 Next, run the command `terraform apply -var-file apply-tfvars/dev.tfvars`.
@@ -57,7 +57,7 @@ The Terraform outputs will display the URL. When you click on the URL you will s
 
 ## Next Steps
 - Enable Authentication with an authentication provider, e.g. [GitHub Authentication Provider](https://backstage.io/docs/auth/github/provider/).
-- Enable [GitHub Discovery](https://backstage.io/docs/integrations/github/discovery/)to automatically add repositories to the Backstage catalog.
+- Enable [GitHub Discovery](https://backstage.io/docs/integrations/github/discovery/) to automatically add repositories to the Backstage catalog.
 - Author [Backstage Software Templates](https://backstage.io/docs/features/software-templates/).
 - [Customize Backstage](https://backstage.io/docs/getting-started/app-custom-theme/).
 - [Configure CI/CD](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-ecs-ecr-codedeploy.html).
