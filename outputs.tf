@@ -3,21 +3,16 @@ output "account_id" {
   value       = data.aws_caller_identity.current.account_id
 }
 
-output "name_prefix" {
-  description = "string to prepend to all resource names"
-  value       = var.name_prefix
-}
-
-output "name_suffix" {
-  description = "string to append to all resource names"
-  value       = local.name_suffix
-}
-
-output "common_tags" {
-  description = "tags which should be applied to all taggable objects"
-  value       = local.common_tags
-}
-
 output "region" {
   value = var.region
+}
+
+output "ns_records" {
+  description = "Name server records of the Backstage hosted zone"
+  value       = aws_route53_zone.backstage.name_servers
+}
+
+output "backstage_url" {
+  description = "URL for accessing Backstage"
+  value       = "https://${local.domain_name}"
 }

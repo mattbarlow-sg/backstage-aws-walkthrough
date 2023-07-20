@@ -8,41 +8,32 @@ variable "env_name" {
   type        = string
 }
 
-variable "name_prefix" {
-  description = "String to use as prefix on object names"
-  type        = string
-}
-
-variable "name_suffix" {
-  description = "String to append to object names. This is optional, so start with dash if using."
-  type        = string
-  default     = ""
-}
-
 variable "source_repo" {
   description = "name of repo which holds this code"
   type        = string
 }
 
-//variable "application_name" {
-//  description = "The name of the application to put in the Application tag"
-//  type        = string
-//}
-
-variable "backup_key" {
-  description = "Tag key used to indicate backup resource"
-  type        = string
-  default     = "AWS_Backup"
+variable "vpc_cidr_octet" {
+  description = "Second CIDR octet for VPC."
+  type        = number
 }
 
-variable "backup_key_value" {
-  description = "Tag key used to indicate backup resource"
+variable "application_name" {
+  description = "The name of the application to deploy."
   type        = string
-  default     = true
 }
 
-variable "backup_failed_sns_endpoint" {
-  description = "SNS topic endpoint"
+variable "docker_image" {
+  description = "The docker image to deploy."
   type        = string
-  default = "msp@stratusgrid.com"
+}
+
+variable "allowed_cidr" {
+  description = "Allow given IP CIDR access to Backstage."
+  type        = string
+}
+
+variable "backstage_domain_name" {
+  description = "Domain name for Backstage."
+  type        = string
 }
