@@ -1,7 +1,7 @@
 ## Introduction
 This repo contains the Terraform to deploy Backstage to AWS for evaluation purposes. A new VPC and associated resources are created. Backstage will be deployed to ECS in private subnets fronted by an Application Load Balancer in a public subnet. On the backend, Backstage connects to a PostgreSQL RDS instance for state management.
 
-![ECS Architecture](images/ECS Architecture.png)
+![ECS Architecture](images/architecture.png)
 
 Please note that the instructions in this repo will enable you to use Backstage for evaluation purposes. Further investment will be required in order to implement Backstage in a production capacity. See Next Steps below for more details.
 
